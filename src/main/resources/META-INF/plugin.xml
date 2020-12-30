@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.ray.file</id>
     <name>TxtReader</name>
-    <vendor email="exiaoyuan@outlook.com" url="http://www.yixiaoyuan.com">nine-ray</vendor>
+    <vendor email="exiaoyuan@outlook.com" url="https://github.com/nine-ray/TxtReader">nine-ray</vendor>
 
     <description>
         The plug-in provides large txt type document reading ability, the plug-in will output the content in the console.
