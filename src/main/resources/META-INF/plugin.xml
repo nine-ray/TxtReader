@@ -1,0 +1,45 @@
+<idea-plugin>
+    <id>com.ray.file</id>
+    <name>TxtReader</name>
+    <vendor email="exiaoyuan@outlook.com" url="http://www.yixiaoyuan.com">nine-ray</vendor>
+
+    <description>
+        The plug-in provides large txt type document reading ability, the plug-in will output the content in the console.
+        插件提供较大的txt类型文档阅读能力，插件会将内容输出在控制台。
+        使用方法：
+            1.点击下方的"TxtReader"
+            2.双击空白的控制台部分，点击"txt reader"
+            3.选择你想要阅读的txt类型文件
+        异常：
+        如果出现乱码，可以点击左下方的编辑按钮更换编码类型。
+        How to use:
+        1. Click on TxtReader below
+        2. Double-click the blank console section, Click ”txt reader”
+        3. Choose the txt type file you want to read
+
+        ANOMALIES:
+        If there is garbled code, you can click the edit button at the bottom left to change the encoding type.
+    </description>
+
+    <change-notes>
+        Fix the plug-in Bug, remove the use of the invalidation API.
+
+        修复插件漏洞，删掉废除API使用。
+    </change-notes>
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!--canCloseContents 允许用户关闭-->
+        <toolWindow canCloseContents="false" anchor="bottom"
+                    id="TxtReader"
+                    factoryClass="com.ray.file.MyToolWin">
+        </toolWindow>
+    </extensions>
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.ray.file.FileLogAction" class="com.ray.file.FileLogAction" text="txt reader"
+                description="摸鱼神器" icon="/icons/logo2_1616.png">
+            <add-to-group group-id="ConsoleView.PopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
